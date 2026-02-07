@@ -34,3 +34,16 @@ Creates a new project under the user's account.
 - **401:** Unauthorized (Invalid API Key)
 - **404:** Resource Not Found
 - **500:** Server Error
+## Rate Limiting
+API requests are limited to 1000 requests per hour per API Key.
+- **Rate Limit Header:** `X-RateLimit-Remaining: 999`
+- **Exceeded Response:** `429 Too Many Requests`
+
+## Best Practices
+- Cache responses when possible to reduce API calls
+- Use appropriate HTTP methods for each operation
+- Include meaningful error handling in your implementation
+- Keep your API Key secure and never commit it to version control
+
+## Support
+For additional help, visit our [API Documentation](https://docs.example.com) or contact support@example.com
